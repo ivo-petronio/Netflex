@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="logo">iPirate</a>
+        <ul class="nav">
+            <li><a href="#"><i class="fa-solid fa-house-chimney"></i>Home</a></li>
+            <li><a href="#">Séries</a></li>
+            <li><a href="#">Filmes</a></li>
+            <li><a href="#">Cartoons</a></li>
+            <li><a href="#">Salvos</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="content active">
+            <img src="./images/futurama.png" alt="" class="movie-title">
+            <h4><span>Cartoon</span><span><i>-18</i></span><span>Sarcástico</span></h4>
+            <p class="sinopse poppins-regular">
+                
+            </p>
+            <div class="button">
+                <a href="#"><i class="fa-solid fa-play"></i>Assistir</a>
+                <a href="#"><i class="fa-solid fa-plus"></i>Salvar</a>
+            </div>
+        </div>
+        <div class="carousel-box">
+            <div class="carousel">
+                <div class="carousel-item" position="0" onclick="toggleTemplate(this)">
+                    <img src="./images/futurama_carousel_item.jpg">
+                </div>
+                <div class="carousel-item" position="1"  onclick="toggleTemplate(this)">
+                    <img src="./images/lilo_stitch.jpg">
+                </div>
+                <div class="carousel-item" position="2" onclick="toggleTemplate(this)">
+                    <img src="./images/o_chamado.jpg">
+                </div>
+                <div class="carousel-item" position="3"  onclick="toggleTemplate(this)">
+                    <img src="./images/thirteen_ghosts.jpg">
+                </div>
+                <div class="carousel-item" position="4" onclick="toggleTemplate(this)">
+                    <img src="./images/a_hora_do_pesadelo.jpg">
+                </div>
+                <div class="carousel-item" position="5" onclick="toggleTemplate(this)">
+                    <img src="./images/ghost_vida_carousel.jpg">
+                </div>
+            </div>
+        </div>
+        <a href="#" class="play" onclick="playVideo(this)"><i class="fa-solid fa-circle-play"></i>Watch trailer</a>
+        <ul class="sci">
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+    </div>
+    <div class="trailer">
+        <iframe class="video" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <img class="close" src="./videos/close.png" onclick="closeVideo()">
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').carousel();
+        }); 
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
