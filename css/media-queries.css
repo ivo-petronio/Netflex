@@ -68,10 +68,6 @@
         box-sizing: border-box;
     }
 
-    body {
-        width: 100vw;
-    }
-
     .header {
         justify-content: space-between;
         align-items: center;
@@ -99,7 +95,7 @@
         flex-direction: column;
         justify-content: center;
         height: 94vh;
-        width: 100%;
+        width: 100vw;
         padding: 0;
     }
 
@@ -117,16 +113,10 @@
         width: 40%;
     }
 
-    .banner .carousel-box {
-        height: 90%;
-        width: 100%;
-        transform: scale(.8);
-    }
-
     .banner .carousel-box .carousel {
         height: 100%;
+        perspective: 300px;
         width: 100%;
-        perspective: 350px;
         display: flex;
         align-items: center;
     }
