@@ -64,7 +64,7 @@
 
     body {
         width: 100vw;
-        height: 96vh;
+        height: 94vh;
     }
 
     .header {
@@ -101,7 +101,7 @@
     .content {
         display: flex;
         flex-direction: column;
-        padding: 40% 0 0;
+        padding: 40% 5% 0;
     }
 
     .content .movie-title {
