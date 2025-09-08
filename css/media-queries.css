@@ -64,7 +64,7 @@
 
     body {
         width: 100vw;
-        height: 95vh;
+        height: 96vh;
     }
 
     .header {
@@ -93,7 +93,7 @@
         background-position: 25% 0;
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
+        height: 96vh;
         width: 100%;
         padding: 0;
     }
