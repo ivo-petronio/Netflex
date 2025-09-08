@@ -8,28 +8,32 @@ const FUTURAMA = {
     background: "images/futurama_banner.jpg",
     title: "images/futurama.png",
     sinopse: "Cansado de trabalhar como entregador e de inúmeros fracassos na vida, Fry vai parar por acidente no ano 3000, onde tudo e todos que conhecia já não existem mais. Agora Fry terá uma nova chance de recomeçar, cercado de muita tecnologia e de criaturas estranhas vindas de outras galáxias.",
-    video: "https://www.youtube.com/embed/xDO3wrzJ82g?si=AQjG2kfb6ei37kdf"
+    video: "https://www.youtube.com/embed/xDO3wrzJ82g?si=AQjG2kfb6ei37kdf",
+    bgm: "sounds/futurama_bgm.mp3"
 }
 
 const LILO_STITCH = {
     background: "images/lilo_stitch_background.webp",
     title: "images/lilo_stitch_title.jpg",
     sinopse: "lilo&Stitchlilo&Stitchlilo&Stitchlilo&Stitchlilo&Stitchlilo&St itchlilo&Stitc hlilo&Stitc hlilo&Stitchlilo&Stitchlilo&Stitchlilo&Stitchl ilo&Stitchlilo&S titchlilo&Stit chli lo& Stitc hlilo &Stitchl ilo&Stitc hlilo&Sti tchlilo&Sti tchlilo&St it chl il o&Sti tchli lo&St itchl ilo&S titc hl ilo&S titch lilo &Stit chlilo &Stit ch.",
-    video: "https://www.youtube.com/embed/oLnS1Ij9-Kk?si=SHJTsWd2edU49fwl"
+    video: "https://www.youtube.com/embed/oLnS1Ij9-Kk?si=SHJTsWd2edU49fwl",
+    bgm: ""
 }
 
 const THERING = {
     background: "images/o_chamado_background.jpg",
     title: "images/o_chamado_title.png",
     sinopse: "Samara é uma menina assustadora que sai de dentro de um poço e depois de dentro de uma TV.",
-    video: "https://www.youtube.com/embed/-xG3jTTNc7s?si=VEVivp7esYoYI69V"
+    video: "https://www.youtube.com/embed/-xG3jTTNc7s?si=VEVivp7esYoYI69V",
+    bgm: ""
 }
 
 const THIRTEEN = {
     background: "images/thirteen_ghosts_background.jpg",
     title: "images/thirteen_title.webp",
     sinopse: "Uma família herda a casa perfeita, ou melhor, perfeitamente mal assombrada. Cuidado para não se perder neste labirinto de vidro: pode ser que um fantasmas acabe o encontrando...",
-    video: "https://www.youtube.com/embed/g4-IAugpy4I?si=KE500_MYBT11g5qH"
+    video: "https://www.youtube.com/embed/g4-IAugpy4I?si=KE500_MYBT11g5qH",
+    bgm: ""
 }
 
 const PESADELO = {
@@ -75,6 +79,7 @@ function toggleTemplate(element) {
 }
 
 function playVideo(element) {
+    bgm.pause();
     player.classList.toggle("active");
     let itemTemplate = parseInt(element.getAttribute("position"));
     video.src = TEMPLATES[itemTemplate].video;
