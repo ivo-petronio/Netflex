@@ -94,30 +94,36 @@
         flex-direction: column;
         justify-content: flex-end;
         height: 95vh;
+        width: 100%;
+        padding: 0;
     }
 
     .content {
         display: flex;
         flex-direction: column;
-        gap: 5%;
-        padding-top: 15%;
-    }
-
-    .content .button {
-        width: 100%;
-    }
-
-    .content .button a {
-        width: 40%;
+        padding: 40% 5% 0;
     }
 
     .content .movie-title {
         display: none;
     }
 
-    .carousel {
-        height: 70%;
-        width: 90%;
+    .banner .content .button a {
+        width: 40%;
+    }
+
+    .banner .carousel-box {
+        height: 100%;
+        width: 100%;
+    }
+
+    .banner .carousel-box .carousel {
+        height: 80%;
+        width: 100%;
+    }
+
+    .banner .play {
+        width: 38%;
     }
 
     .trailer.active {

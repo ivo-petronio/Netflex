@@ -25,7 +25,7 @@ const THERING = {
     title: "images/o_chamado_title.png",
     sinopse: "Samara é uma menina assustadora que sai de dentro de um poço e depois de dentro de uma TV.",
     video: "https://www.youtube.com/embed/-xG3jTTNc7s?si=VEVivp7esYoYI69V",
-    bgm: ""
+    bgm: "sounds/the_ring_bgm.mp3"
 }
 
 const THIRTEEN = {

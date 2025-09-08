@@ -369,7 +369,7 @@ body {
 
 .banner .carousel-box {
     position: relative;
-    min-width: 650px;
+    min-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
