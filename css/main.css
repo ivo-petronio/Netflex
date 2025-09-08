@@ -286,7 +286,7 @@ body {
 
 .content {
     position: relative;
-    max-width: 550px;
+    flex: 1;
     display: none;
     visibility: hidden;
     transform: scale(0);
@@ -369,7 +369,7 @@ body {
 
 .banner .carousel-box {
     position: relative;
-    min-width: 100%;
+    flex: 2;
     display: flex;
     justify-content: center;
     align-items: center;
