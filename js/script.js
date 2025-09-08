@@ -1,6 +1,8 @@
 var player = document.querySelector(".trailer")
 var video = document.querySelector(".video")
 var trailerButton = document.querySelector(".play")
+var bgm = new Audio();
+var isBgm = false;
 
 const FUTURAMA = {
     background: "images/futurama_banner.jpg",
@@ -34,14 +36,16 @@ const PESADELO = {
     background: "images/hora_pesadelo_background.jpg",
     title: "images/hora_pesadelo_title.webp",
     sinopse: "Prepare-se para conhecer o homem dos seus sonhos, literalmente...",
-    video: "https://www.youtube.com/embed/HHNMjwYPlvY?si=f5ROdQ4n09dIvrhU"
+    video: "https://www.youtube.com/embed/HHNMjwYPlvY?si=f5ROdQ4n09dIvrhU",
+    bgm: "sounds/pesadelo_bgm.mp3"
 }
 
 const GHOST = {
     background: "images/ghost_vida_background.jpg",
     title: "images/ghost_vida_title.jpg",
     sinopse: "Filme meloso pra quem sonha em fazer um vaso de barro tendo um fantasma como professor.",
-    video: "https://www.youtube.com/embed/Svorm23zipw?si=lpC9uQDxdpMmEMz0"
+    video: "https://www.youtube.com/embed/Svorm23zipw?si=lpC9uQDxdpMmEMz0",
+    bgm: "sounds/ghost_vida_bgm.mp3"
 }
 
 const TEMPLATES = [FUTURAMA, LILO_STITCH, THERING, THIRTEEN, PESADELO, GHOST]
@@ -53,11 +57,20 @@ var template = {
 }
 
 function toggleTemplate(element) {
+    if (isBgm) {
+        bgm.pause();
+        bgm = null;
+        !isBgm;
+    }
+    bgm = new Audio();
     let index = parseInt(element.getAttribute("position"));
     console.log(index);
     template.background.style.backgroundImage = "url(" + TEMPLATES[index].background + ")";
     template.title.src = TEMPLATES[index].title;
     template.sinopse.innerHTML = TEMPLATES[index].sinopse;
+    bgm.setAttribute("src", TEMPLATES[index].bgm)
+    bgm.play();
+    isBgm = true;
     trailerButton.setAttribute("position", index);
 }
 
@@ -70,5 +83,8 @@ function playVideo(element) {
 function closeVideo() {
     player.classList.toggle("active");
     video.src = "";
-    video.pause();
+}
+
+function stopBgm(bgm) {
+
 }
