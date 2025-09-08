@@ -62,9 +62,14 @@
 
 @media screen and (max-width: 720px) {
 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     body {
         width: 100vw;
-        height: 94vh;
     }
 
     .header {
@@ -94,7 +99,7 @@
         flex-direction: column;
         justify-content: center;
         height: 94vh;
-        width: 100vw;
+        width: 100%;
         padding: 0;
     }
 
@@ -113,8 +118,9 @@
     }
 
     .banner .carousel-box {
-        height: 100%;
-        width: 500px;
+        height: 90%;
+        width: 100%;
+        background-color: red;
         transform: scale(.8);
     }
 
