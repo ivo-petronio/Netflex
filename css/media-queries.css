@@ -91,11 +91,10 @@
 
     .banner {
         background-size: cover;
-        background-position: center;
-        background-clip: border-box;
+        background-position: 25% 0;
         flex-direction: column;
         justify-content: flex-end;
-        height: 90vh;
+        height: 95vh;
     }
 
     .content {
@@ -107,7 +106,7 @@
         width: 100%;
     }
 
-    .content. .button a {
+    .content .button a {
         width: 30%;
     }
 
