@@ -1,0 +1,111 @@
+@media screen and (max-width: 1920px) {
+
+    body {
+        width: 100%;
+    }
+
+    .banner {
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1270px) {
+
+    body {
+        height: 100vh;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .header .nav {
+        width: 40%;
+    }
+
+    .banner {
+        padding: 5%;
+        background-size: 100%;
+    }
+
+    .banner .content {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .banner .content .movie-title {
+        position: absolute;
+        height: 14vh;
+        width: 9vw;
+        top: 10vh;
+        left: 0;
+    }
+
+    .banner .content .button {
+        width: 100%;
+    }
+
+    .banner .content .button a {
+        width: 25%;
+        text-align: center;
+        font-size: .7em;
+    }
+
+    .carousel-box {
+        height: 80%;
+        width: 100%;
+        transform: scale(.7);
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    body {
+        width: 100%;
+    }
+
+    .header {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3%;
+    }
+
+    .hamburguer {
+        display: inline-block;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        line-height: 100%;
+    }
+
+    .nav, .search {
+        display: none;
+    }
+
+    .banner {
+        background-size: cover;
+        background-position: center;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 80vh;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content .movie-title {
+        position: relative;
+    }
+
+    .carousel {
+        height: 100%;
+    }
+}
