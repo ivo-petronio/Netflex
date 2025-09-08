@@ -22,7 +22,7 @@ const LILO_STITCH = {
 
 const THERING = {
     background: "images/o_chamado_background.jpg",
-    title: "images/o_chamado_title.png",
+    title: "images/o_chamado_title.jpg",
     sinopse: "Samara é uma menina assustadora que sai de dentro de um poço e depois de dentro de uma TV.",
     video: "https://www.youtube.com/embed/-xG3jTTNc7s?si=VEVivp7esYoYI69V",
     bgm: "sounds/the_ring_bgm.mp3"
