@@ -78,7 +78,9 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 3%;
+        position: relative;
         background-color: red;
+        height: 10vh;
     }
 
     .hamburguer {
@@ -100,10 +102,9 @@
         background-size: cover;
         background-position: 25% 0;
         flex-direction: column;
-        justify-content: center;
         width: 100%;
-        height: 100vh;
-        top: -13vh;
+        height: 100%;
+        padding: 20% 0 0;
     }
 
     .content {
@@ -137,6 +138,7 @@
 
     .bottomContainer {
         height: 8vh;
+        background-color: red;
     }
 
     .bottomContainer .bottom .play {
