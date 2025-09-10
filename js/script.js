@@ -52,7 +52,14 @@ const GHOST = {
     bgm: "sounds/ghost_vida_bgm.mp3"
 }
 
-const TEMPLATES = [FUTURAMA, LILO_STITCH, THERING, THIRTEEN, PESADELO, GHOST]
+const SCOOBY_DOO = {
+    background: "images/scooby_doo_background.webp",
+    sinopse: "Enfrentar monstros, bruxas, vampiros e fantasmas já é divertido. Mas com seu amigo peludo de quatro patas é melhor ainda.",
+    bgm: "sounds/scooby_doo_bgm.mp3",
+    video: "https://www.youtube.com/embed/9mxz3Ma2DLk?si=ZmwwDccYIEnleWfU"
+}
+
+const TEMPLATES = [FUTURAMA, LILO_STITCH, THERING, THIRTEEN, PESADELO, GHOST, SCOOBY_DOO]
 
 var template = {
     background: document.querySelector(".banner"),
@@ -72,7 +79,7 @@ function toggleTemplate(element) {
     template.background.style.backgroundImage = "url(" + TEMPLATES[index].background + ")";
     template.title.src = TEMPLATES[index].title;
     template.sinopse.innerHTML = TEMPLATES[index].sinopse;
-    bgm.setAttribute("src", TEMPLATES[index].bgm)
+    bgm.setAttribute("src", TEMPLATES[index].bgm);
     bgm.play();
     isBgm = true;
     trailerButton.setAttribute("position", index);
@@ -88,8 +95,4 @@ function playVideo(element) {
 function closeVideo() {
     player.classList.toggle("active");
     video.src = "";
-}
-
-function stopBgm(bgm) {
-
 }
