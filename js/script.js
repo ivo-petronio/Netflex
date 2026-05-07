@@ -83,7 +83,6 @@ function toggleTemplate(element) {
     template.sinopse.innerHTML = TEMPLATES[index].sinopse;
     bgm.setAttribute("src", TEMPLATES[index].bgm);
     if(isMute == false) {
-        console.log(`O valor de isMute é: ${isMute}`)
         bgm.play();
         isBgm = true;
     } 
@@ -103,9 +102,14 @@ function closeVideo() {
 }
 
 function mutePage() {
-    console.log(isMute)
-    bgm.pause();
-    isBgm = false
     isMute = !isMute
-    soundIcon.src = isMute ? "./images/mute.png" : "./images/sound.png"
+    if (!isMute) {
+        isBgm = true
+        bgm.play()
+        soundIcon.src = "./images/sound.png"
+    } else {
+        isBgm = false
+        bgm.pause()
+        soundIcon.src = "./images/mute.png"
+    }
 }
