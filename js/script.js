@@ -3,6 +3,9 @@ var video = document.querySelector(".video")
 var trailerButton = document.querySelector(".play")
 var bgm = new Audio();
 var isBgm = false;
+var isMute = false;
+const soundIcon = document.querySelector(".muteButton")
+soundIcon.src = "./images/sound.png"
 
 const FUTURAMA = {
     background: "images/futurama_banner.jpg",
@@ -75,13 +78,15 @@ function toggleTemplate(element) {
     }
     bgm = new Audio();
     let index = parseInt(element.getAttribute("position"));
-    console.log(index);
     template.background.style.backgroundImage = "url(" + TEMPLATES[index].background + ")";
     template.title.src = TEMPLATES[index].title;
     template.sinopse.innerHTML = TEMPLATES[index].sinopse;
     bgm.setAttribute("src", TEMPLATES[index].bgm);
-    bgm.play();
-    isBgm = true;
+    if(isMute == false) {
+        console.log(`O valor de isMute é: ${isMute}`)
+        bgm.play();
+        isBgm = true;
+    } 
     trailerButton.setAttribute("position", index);
 }
 
@@ -95,4 +100,12 @@ function playVideo(element) {
 function closeVideo() {
     player.classList.toggle("active");
     video.src = "";
+}
+
+function mutePage() {
+    console.log(isMute)
+    bgm.pause();
+    isBgm = false
+    isMute = !isMute
+    soundIcon.src = isMute ? "./images/mute.png" : "./images/sound.png"
 }
